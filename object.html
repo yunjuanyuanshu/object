@@ -1,0 +1,29 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <title>object</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <script>
+        var Lincoln = {
+        make:'Lincoln',
+        model:'MKC',
+        year:2013,
+        color:'black',
+        passengers:5,
+        mileage:130000
+      }
+      document.write(Lincoln.make + "的颜色是" + Lincoln.color)
+      function isNew(car){
+        if (car.year >= 2016 &&  car.mileage < 10000 ){
+          document.write("新车");
+        } else {
+          document.write ("您的车" + car.make + "不值钱了");
+        }
+        document.write ("<br>");
+      }
+    isNew(Lincoln)
+    </script>
+  </body>
+</html>
