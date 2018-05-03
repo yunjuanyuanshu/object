@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+      <title>object</title>
+      <meta charset ="utf-8">
+  </head>
+  <body>
+      <script>
+        var flat ={
+          make: "Flat",
+          model: "500",
+          year: 1957,
+          color: "Medium Blue",
+          drive: function () {
+            alert("Zoom Zoom!!");
+          },
+          getColor: function() {
+            return this.color;
+          },
+          setColor: function(c) {
+            this.color = c;
+          }
+        }
+          document.write(flat.getColor() + "<br>");
+          flat.setColor("orange");
+          document.write(flat.getColor() + "<br>");
+      </script>
+  </body>
+</html>

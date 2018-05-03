@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+      <title>object</title>
+      <meta charset ="utf-8">
+  </head>
+  <body>
+      <script>
+        var cayenne ={
+          make: "cayenne",
+          model: "3.0T Platinum Edition",
+          year: 2016,
+          color: "black",
+          passengers: 4,
+          mileage: 120000
+        }
+
+        var suteng ={
+          make: "suteng",
+          model: "18OTSI",
+          year: 2017,
+          color: "white",
+          passengers: 4,
+          mileage: 100000
+        } 
+        document.write(cayenne.make + "的颜色是" + cayenne.color +"<br>");
+        document.write(suteng.make + "的颜色是" + suteng.color +"<br>");
+        function isNeW(car){
+          if (car.year >= 2016 && car.mileage < 10000) {
+            document.write("新车");
+          }else{
+            document.write("你的车" + car.make + "不值钱了");
+          }
+          document.write("<br>");
+        }
+        isNeW(cayenne)
+        isNeW(suteng)
+      </script>
+  </body>
+</html>
