@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+    <script>
+      function init(){
+          var obj = document.getElementById("t");
+          //alert(obj.innerHTML + "其实我就是一个字符串");
+          obj.innerHTML = "我不是标题";  
+          //alert(document.getElementById("pic").getAttribute("alt"));
+          //document.getElementById("pic").setAttribute("src","2.jpg " );
+      }
+      function changePic(){
+        if (document.getElementById("pic").getAttribute("src", "2.jpg") == "1.jpg"){
+          document.getElementById("pic").setAttribute("src","2.jpg");
+        }else {
+          document.getElementById("pic").setAttribute("src","1.jpg");
+        }
+      }
+      window.onload = init;
+  </script>
+</head>
+<body>
+  <h1 id ="t">我是标题</h1>
+  <img id = "pic" src = "1.jpg" alt = "复联图片"><br>
+  <button onclick="changePic()">点击试试</button>
+</body>
+</html>
