@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    function init(){
+        document.write("读读一些和字符串有关的属性和方法<br>");
+
+        var str="hello world!!";// 字符串实际上是以对象的形式存储在计算机中的
+        document.write(str.length + "<br>");
+
+        // indexOf()方法能够查找出字符串中第一个符合条件的字符的位置
+        document.write(str.indexOf("lo w") + "<br>");
+
+        // substring()方法可以根据给定的参数，截取对应的字符串
+        document.write(str.substring(6,11) + "<br>");
+
+        // 不用人工数的方式，取出hello world字符串中的world
+        // var qian = str.indexOf("w");
+        // var hou = str.indexOf("!");
+        // document.write(str.substring(qian,hou) + "<br>");
+
+        //要考虑到通用性，我的字符串不一定是 hello world|| good game|| world is good
+        var cutString = "world";
+        var startIndex = str.indexOf(cutString);
+        var endIndex = startIndex + cutString.length;
+        var result = str.substring(startIndex,endIndex);
+        document.write(result);
+    }
+    window.onload = init;
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
